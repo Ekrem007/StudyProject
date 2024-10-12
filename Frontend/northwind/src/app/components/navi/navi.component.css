@@ -1,0 +1,11 @@
+.nav-link {
+    cursor: pointer;
+    pointer-events: auto; /* Tıklanabilirliği sağlar */
+    z-index: 1; /* Üstte görünmesini sağlar */
+}
+/* Bu CSS kodu, form ve çıkış yap butonunu hizalamak için kullanılacaktır */
+.navbar .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  

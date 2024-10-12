@@ -1,0 +1,20 @@
+<ul class="list-group">
+
+    <li [class]="getAllCategoryClass()" routerLink="/products">
+      Tüm ürünler
+    </li>
+    
+
+    <li 
+      *ngFor="let category of categories" 
+      [class]="getCurrentCategoryClass(category)"
+      (click)="setCurrentCategory(category)"
+      routerLink="/products/category/{{category.categoryId}}"
+      class="d-flex justify-content-between align-items-center">
+      {{category.categoryName}}
+      <button class="btn btn-sm btn-outline-primary"(click)="deleteCategory(category.categoryId)">Sil</button>
+    </li>
+  </ul>
+  
+  <h6 *ngIf="currentCategory">{{currentCategory.categoryName}} seçtiniz.</h6>
+  

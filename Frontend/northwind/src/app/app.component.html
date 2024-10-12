@@ -1,0 +1,8 @@
+<div class="container">
+  <app-navi *ngIf="!isLoginPage()"></app-navi>
+  <div class="row">
+    <div class="col-md-11" [class.col-md-12]="isLoginPage()">
+      <router-outlet></router-outlet>  
+    </div>   
+  </div>
+</div>
